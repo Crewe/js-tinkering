@@ -118,6 +118,7 @@ $(function() {
             reader.onload = (function(theFile) {
                 return function (e) {
                     $('#logo-image').attr('src', e.target.result);
+                    showResult('#result-data', label + ' selected as logo file.\n');
                     appendResult('#result-data', wrapPreText(e.target.result, 100) + '\n');
                     localStorage.setItem('logoImage', e.target.result);
                 };
@@ -130,8 +131,6 @@ $(function() {
 
             var input = $(this).parents('.input-group').find(':text'),
               log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-            appendResult('#result-data', label + ' selected as logo file.\n');
 
             if( input.length ) {
               input.val(log);
