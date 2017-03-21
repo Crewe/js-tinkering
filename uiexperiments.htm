@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- jQuery Google CDN -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Custom scripts and CSS -->
+        <link rel="stylesheet" type="text/css" href="css/uiexperiments.css" />
+        <script type="text/javascript" src="js/helpers.js"></script>
+        <script type="text/javascript" src="js/uiexperiments.js"></script>
+        <script type="text/javascript" src="js/ependpoints.js"></script>
+    </head>
+    <body>
+        <div id="loading-bar"></div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <span class="navbar-brand">Something Texty</span>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);" id="increase-font">+A</a></li>
+                    <li><a href="javascript:void(0);" id="decrease-font">-A</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">Configuration</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="endpointUrl">Endpoint URL</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">https://</span>
+                                    <input type="text" class="form-control input-sm" id="endpointUrl" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="endpointPort">Endpoint Port</label>
+                                <input type="text" class="form-control input-sm" id="endpointPort" placeholder="444" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Heading</div>
+                        <div class="panel-body">
+                            <div>
+                                <p>Yeah, you can see what the button does.</p>
+                            </div>
+                            <div class="row">
+                                <div id="preview-div" class="thumbnail">
+                                    <img id="logo-image"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-success btn-sm" id="click-it">Toggle Loading Bar</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="logo-browse">Company Logo</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" placeholder="company_logo.png" readonly/>
+                                    <label class="input-group-btn">
+                                        <span class="btn btn-primary btn-sm">Browse&hellip; <input id="logo-browse" type="file" style="display: none;" accept="image/*">
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div  class="form-group">
+                            <a href='another.htm' target='_blank'>
+                                <div class="btn btn-warning btn-sm">Go See</div>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Do some Ajax-y stuff</div>
+                        <div class="panel-body">
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="clientGroupId">Client Group Id</label>
+                                    <select id="clientGroupId" class="form-control input-sm">
+                                        <option value="">WTW</option>
+                                        <option value="">HFX</option>
+                                        <option value="">MS</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="clientId">Client Id</label>
+                                    <input type="text" id="clientId" class="form-control input-sm" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="guid-ee">GUID? EE#?</label>
+                                <input type="text" class="form-control input-sm" id="guid-ee" placeholder="00000000-0000-0000-0000-000000000000" />
+                            </div>
+                            <div class="form-group">
+                                <label for="something-else">Input?</label>
+                                <input type="text" class="form-control input-sm" id="something-else" placeholder="something else" />
+                            </div>
+                            <div class="btn btn-default btn-sm" id="ajax-y" onClick="getEpUsers()">List Users</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="panel panel-success" id="result-pane">
+                        <div class="panel-heading">Results</div>
+                        <div class="panel-body monospace">
+                            <pre id="result-data" class="hidden"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/jquery.color-2.1.2.min.js"></script>
+    </body>
+<html>

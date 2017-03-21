@@ -1,0 +1,16 @@
+/* experiments.css */
+
+#loading-bar {
+	height:5px;
+	background: #00AB22;
+	width:100%;
+	border-top: 1px solid #aaa;
+}
+
+.monospace {
+	font-family: courier;
+}
+
+#logo-image {
+	display: block;
+}
