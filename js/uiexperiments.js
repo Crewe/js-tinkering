@@ -58,7 +58,8 @@ $(function() {
     $('#preview-div').hide();
 
 /* Start: Accessibility font size changer */
-    // Using Closure with private function, also know as the Module Pattern
+    // Using Closure with private function, also know as the Module Pattern.
+    // Here fontChanger is the 'Module'.
     var fontChanger = (function() {
         var _currentSize = parseInt($('body').css('font-size').replace('px','').replace('em',''));
         var _increment = 3;
