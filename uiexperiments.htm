@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">Do some Ajax-y stuff</div>
                         <div class="panel-body">
@@ -107,6 +107,15 @@
                                 <input type="text" class="form-control input-sm" id="something-else" placeholder="something else" />
                             </div>
                             <div class="btn btn-default btn-sm" id="ajax-y" onClick="getEpUsers()">List Users</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Preloaded Image</div>
+                        <div class="panel-body">
+                           <img id="logo-preload" onLoad="getRemoteImage()"/> 
                         </div>
                     </div>
                 </div>

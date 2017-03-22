@@ -103,7 +103,7 @@ $(function() {
     });
 
     // Watch for custom `fileselect` event
-    $(document).ready( function() {
+    $(document).ready(function() {
         $('#logo-browse').on('fileselect', function(event, numFiles, label) {
             // Check for support
             if (!localStorageSupport()) { return; }
@@ -165,12 +165,12 @@ $(function () {
 });
 
 $(document).ajaxStart(function() { 
-    appendResult('#result-data', 'Loading bar now being shown...');
+    appendResult('#result-data', 'Loading bar now being shown...\n');
     $('#loading-bar').attr('style','');
     $('#loading-bar').show('slow').promise().done(pulseBar('#loading-bar'));
 });
 
 $(document).ajaxStop(function() { 
-    appendResult('#result-data', 'Loading bar now being hidden.');
+    appendResult('#result-data', 'Loading bar now being hidden.\n');
     $('#loading-bar').animate({height: '-1px'}, 'slow').promise().done(poof('#loading-bar'));
 });
