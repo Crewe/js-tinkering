@@ -48,7 +48,7 @@ $(function getRemoteImage() {
 
     //$.get()
 
-    var xhr = new XMLHttpRequest();
+   /* var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://www.logolounge.com/wd/uploads/17388_236085.jpg');
     xhr.responseType = 'blob';
     xhr.onload = response;
@@ -59,11 +59,12 @@ $(function getRemoteImage() {
         var urlCreator = window.URL || window.webkitURL;
         var imageUrl = urlCreator.createObjectURL(this.response);
         document.querySelector("#logo-preload").src = imageUrl;
-    }
+    }*/
     // --------------------------
 
     var image = new Image();
     image.src ='https://www.logolounge.com/wd/uploads/17388_236085.jpg';
+    $('#logo-preload').attr('src', image.src);
     /*
     var reader = new FileReader();
     // Closure to capture the file information
@@ -84,10 +85,10 @@ $(function getRemoteImage() {
     /*$.get({url: 'http://logonoid.com/images/thumbs/nederlandse-spoorwegen-logo.png', 
         success: function(data) { $('#from-local').attr('src', data); }
     });*/
-    $.get({url: 'https://www.logolounge.com/wd/uploads/17388_236085.jpg',
+    /*$.get({url: 'https://www.logolounge.com/wd/uploads/17388_236085.jpg',
         success: function(data) { $('#logo-preload').attr('src', data); },
-        //fail: function(data) { $('#from-local').attr('src', data); }
-    });
+        fail: function(data) { $('#from-local').attr('src', data); }
+    });*/
     //$('#from-local').attr('src', 'http://logonoid.com/images/thumbs/nederlandse-spoorwegen-logo.png');
     //$('#from-local').show();
 });
