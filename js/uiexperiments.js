@@ -157,11 +157,23 @@ $(function() {
     });
 });
 
+// For the 'freeze pane'
+$(function() {
+    $(window).scroll(function() {
+        if (!$('.navbar-header').visible(true)) { 
+            $('#freeze-pane').fadeIn('slow');
+        }
+        else { 
+            $('#freeze-pane').hide();
+        }
+    });
+});
 
 // Using the short-hand to load hide the bar.
 $(function () {
     pulseBar('#loading-bar');
     $('#loading-bar').hide();
+    $('#freeze-pane').hide();
 });
 
 $(document).ajaxStart(function() { 

@@ -45,9 +45,6 @@ function getMissedForms() {
 }
 
 $(function getRemoteImage() {
-
-    //$.get()
-
    /* var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://www.logolounge.com/wd/uploads/17388_236085.jpg');
     xhr.responseType = 'blob';
@@ -65,6 +62,9 @@ $(function getRemoteImage() {
     var image = new Image();
     image.src ='https://www.logolounge.com/wd/uploads/17388_236085.jpg';
     $('#logo-preload').attr('src', image.src);
+
+    var canvas = $('<canvas/>',{'class':'radHuh'}).width(100).height(100);
+    var toast = canvas;
     /*
     var reader = new FileReader();
     // Closure to capture the file information
